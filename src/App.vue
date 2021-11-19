@@ -1,29 +1,53 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+  <nav>
+    <router-link to="/">Início</router-link> | <router-link to="/p1">1</router-link> |
+    <router-link to="/p2">2</router-link> | <router-link to="/p3">3</router-link> |
+    <router-link to="/p4">4</router-link>
+  </nav>
+  <section>
+    <router-view />
+  </section>
 </template>
+
+<script>
+import './assets/styles/app.scss';
+
+export default {};
+</script>
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  display: flex;
+  flex-direction: column;
 
-#nav {
-  padding: 30px;
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+  section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 
-    &.router-link-exact-active {
-      color: #42b983;
+    article {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+
+      h1 {
+        margin: 0.5em;
+        text-align: center;
+      }
+
+      p {
+        flex: 1;
+        align-self: center;
+        display: flex;
+        align-items: center;
+      }
     }
   }
 }

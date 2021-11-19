@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Galada&family=Jaldi&family=Pompiere&display=swap');
+
+body {
+  color: rgb(228, 202, 202);
+  background-color: rgb(32, 18, 25);
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  font-size: 36px;
+  font-family: 'Jaldi', sans-serif;
+  display: flex;
+}
+
+body > * {
+  flex: 1;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-family: 'Galada', cursive;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  display: inline-block;
+  margin: 0.5em;
+  padding: 0.5em;
+  min-width: 3em;
+  background-color: rgb(228, 202, 202);
+  color: rgb(32, 18, 25);
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Pompiere', cursive;
+}
+
+.router-link-active {
+  background-color: crimson;
+
+  &::before {
+    content: '> ';
+  }
+  &::after {
+    content: ' <';
+  }
+}
